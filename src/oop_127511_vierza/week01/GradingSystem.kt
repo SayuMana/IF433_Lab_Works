@@ -1,5 +1,8 @@
 package oop_127511_vierza.week01
 
+fun calculateStatus(score: Int) =
+    if (score > 75) "Lulus" else "Tidak Lulus"
+
 fun main() {
     val name = "SayuMana"
     val score = 80
@@ -14,4 +17,5 @@ fun main() {
     }
 
     println("Grade kamu: " + grade)
+    println("Status: ${calculateStatus(score)}")
 }
