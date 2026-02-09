@@ -1,17 +1,9 @@
 package oop_127511_vierza.week01
 
-//fun checkSize(area:Double) {
-//    if (area > 100) {
-//        println("Lingkaran besar")
-//    } else {
-//        println("Lingkaran kecil")
-//    }
-//}
-
 fun checkSize(area: Double) =
     if (area > 100) "Lingkaran Besar" else "Lingkaran Kecil"
 
-fun main(args: Array<String>) {
+fun main() {
     val radius = 7.0
     val pi = 3.14
 
