@@ -10,6 +10,8 @@ fun main() {
     val gameTitle = "Tomb Raider"
     val price = 125000
 
+    val userNote: String? = null
+
     val discount = calculateDiscount(price)
     val finalPrice = price - discount
 
@@ -18,11 +20,12 @@ fun main() {
         originalPrice = price,
         finalPrice = finalPrice
     )
+}
 
-    fun printReceipt(title: String, originalPrice: Int, finalPrice: Int) {
-        println("=== STRUK STEAMKW ===")
-        println("Judul Game  : $title")
-        println("Harga Asli  : Rp $originalPrice")
-        println("Harga Akhir : Rp $finalPrice")
-    }
+fun printReceipt(title: String, originalPrice: Int, finalPrice: Int, note: String?) {
+    println("=== STRUK STEAMKW ===")
+    println("Judul Game  : $title")
+    println("Harga Asli  : Rp $originalPrice")
+    println("Harga Akhir : Rp $finalPrice")
+    println("Catatan     : ${note ?: "Tidak ada catatan"}")
 }
