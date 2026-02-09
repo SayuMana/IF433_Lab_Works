@@ -9,4 +9,20 @@ fun calculateDiscount(price: Int): Int = if (price > 500000) {
 fun main() {
     val gameTitle = "Tomb Raider"
     val price = 125000
+
+    val discount = calculateDiscount(price)
+    val finalPrice = price - discount
+
+    printReceipt (
+        title = gameTitle,
+        originalPrice = price,
+        finalPrice = finalPrice
+    )
+
+    fun printReceipt(title: String, originalPrice: Int, finalPrice: Int) {
+        println("=== STRUK STEAMKW ===")
+        println("Judul Game  : $title")
+        println("Harga Asli  : Rp $originalPrice")
+        println("Harga Akhir : Rp $finalPrice")
+    }
 }
