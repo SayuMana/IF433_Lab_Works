@@ -13,4 +13,8 @@ class Student(
             println("LOG: Objek student $name berhasil dialokasikan di Memory.")
         }
     }
+
+    constructor(name, nim) : this(name, nim, "Non-Matriculated") {
+        print("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
+    }
 }
