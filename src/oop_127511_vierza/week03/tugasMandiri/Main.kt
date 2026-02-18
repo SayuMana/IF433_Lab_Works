@@ -9,4 +9,5 @@ fun main() {
     println(weapon.damage)
     weapon.damage = 1000
     println(weapon.damage)
+    println(weapon.tier)
 }
