@@ -1,7 +1,7 @@
 package oop_127511_vierza.week03.tugasMandiri2
 
 class Player {
-    var player: String = "Unknown"
+    var player: String = "Player"
     private var xp: Int = 0
     var level: Int = 0
         get() = (xp / 100) + 1
