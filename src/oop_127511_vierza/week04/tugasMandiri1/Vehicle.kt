@@ -1,4 +1,4 @@
-package oop_127511_vierza.week04.pratikum
+package oop_127511_vierza.week04.tugasMandiri1
 
 open class Vehicle(val brand: String) {
     var speed: Int = 0

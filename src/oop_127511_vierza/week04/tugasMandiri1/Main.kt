@@ -1,4 +1,4 @@
-package oop_127511_vierza.week04.pratikum
+package oop_127511_vierza.week04.tugasMandiri1
 
 fun main() {
     println("Testing vehicle")
@@ -11,4 +11,10 @@ fun main() {
     car.openTrunk()
     car.honk()
     car.accelerate()
+
+    println("\nTesting Electric Car")
+    val car2 = ElectricCar("Subaru New Electric", 2, 80)
+    car2.openTrunk()
+    car2.accelerate()
+    car2.honk()
 }

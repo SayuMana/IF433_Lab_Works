@@ -1,4 +1,4 @@
-package oop_127511_vierza.week04.pratikum
+package oop_127511_vierza.week04.tugasMandiri1
 
 open class Car(brand: String, val numberOfDoors: Int) : Vehicle(brand) {
     fun openTrunk() {
