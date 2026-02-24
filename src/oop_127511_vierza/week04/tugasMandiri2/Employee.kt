@@ -1,4 +1,14 @@
 package oop_127511_vierza.week04.tugasMandiri2
 
-class Employee {
+open class Employee() {
+    val name: String = ""
+    val baseSalary: Int = 0
+
+    open fun work() {
+        println("$name is working")
+    }
+
+    open fun calculateBonus(): Int {
+        return (baseSalary * 0.1).toInt()
+    }
 }
