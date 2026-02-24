@@ -1,6 +1,6 @@
 package oop_127511_vierza.week04.tugasMandiri2
 
-open class Manager() : Employee() {
+open class Manager(name: String, baseSalary: Int) : Employee(name, baseSalary) {
     override fun work() {
         println("$name is leading division meeting")
     }
