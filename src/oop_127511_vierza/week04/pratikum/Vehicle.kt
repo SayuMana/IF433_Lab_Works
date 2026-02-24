@@ -8,7 +8,7 @@ open class Vehicle(val brand: String) {
         println("$brand is moving. Speed: $speed km/h")
     }
 
-    open fun honk() {
-        println("PEEEEEEEEEP")
+    override fun honk() {
+        println("PEEEEEEEEEP! $brand is moving!")
     }
 }
