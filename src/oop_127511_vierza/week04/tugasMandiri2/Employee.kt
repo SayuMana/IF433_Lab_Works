@@ -1,9 +1,6 @@
 package oop_127511_vierza.week04.tugasMandiri2
 
-open class Employee() {
-    val name: String = ""
-    val baseSalary: Int = 0
-
+open class Employee(val name: String, val baseSalary: Int) {
     open fun work() {
         println("$name is working")
     }
