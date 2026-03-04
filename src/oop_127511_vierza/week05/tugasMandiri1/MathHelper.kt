@@ -1,7 +1,7 @@
 package oop_127511_vierza.week05.tugasMandiri1
 import kotlin.math.PI // Peganti 3.14
 
-abstract class MathHelper {
+class MathHelper {
     fun hitungLuas(sisi: Int): Int {
         return (sisi * sisi)
     }
