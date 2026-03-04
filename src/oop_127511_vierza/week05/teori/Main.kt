@@ -1,4 +1,4 @@
-package oop_127511_vierza.week05
+package oop_127511_vierza.week05.teori
 
 fun main() {
     val dosen1 = Dosen("Takanashi Hoshino", "06767")
