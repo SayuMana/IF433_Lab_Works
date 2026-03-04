@@ -9,6 +9,16 @@ fun main() {
     for (paymentMethod in payments) {
         println("Processing payment for ${paymentMethod.accountName}")
         paymentMethod.processPayment(75000.0)
+
+        when (paymentMethod) {
+            is EWallet -> {
+                println("Auto top-up 50000.0...")
+                paymentMethod.topUp(50000.0)
+
+                println("Retrying payment...")
+                paymentMethod.processPayment(75000.0)
+            }
+        }
         println("---------------")
     }
 }
