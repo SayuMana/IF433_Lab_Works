@@ -4,11 +4,11 @@ import oop_127511_vierza.week06.latihan.Rechargeable
 
 class SmartCCTV (override val id: String, override val name: String) : SmartDevice, Switchable, Recordable {
     override fun turnOn() {
-        println("$name turned on")
+        println("$name Turned on")
         startRecord()
     }
     override fun turnOff() {
-        println("$name turned off")
+        println("$name Turned off")
         stopRecord()
     }
 

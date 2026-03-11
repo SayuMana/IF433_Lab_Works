@@ -9,7 +9,7 @@ class SmartSpeaker(override val id: String, override val name: String, var song:
         println("$name Turned Off")
     }
 
-    fun playMusic(Song:String) {
+    fun playMusic(song: String) {
         println("Memutar lagu $song dari Spotify")
     }
 }
