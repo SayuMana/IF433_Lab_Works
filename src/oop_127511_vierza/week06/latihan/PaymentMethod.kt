@@ -1,4 +1,4 @@
-package oop_127511_vierza.week06
+package oop_127511_vierza.week06.latihan
 
 interface PaymentMethod {
     fun pay(amount: Double)

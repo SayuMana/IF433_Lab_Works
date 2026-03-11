@@ -1,4 +1,4 @@
-package oop_127511_vierza.week06
+package oop_127511_vierza.week06.latihan
 
 class Smartphone : Camera, Phone {
     override fun turnOn() {
