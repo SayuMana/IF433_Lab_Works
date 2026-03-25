@@ -13,4 +13,13 @@ fun main() {
     println("Damage\t\t: ${starterWeapon.item.damage}")
     println("Rarity\t\t: ${starterWeapon.item.rarity}")
     println("Durability\t: ${starterWeapon.durability}")
+
+    val upgradedWeapon = starterWeapon.item.copy(damage = 25)
+    println("\nWeapon diupgrade! Damage sekarang: ${upgradedWeapon.damage}")
+
+    println("\n === SIMULASI EVENT BATTLE ===")
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Bahamut"))
+    processEvent(BattleState.LootDropped(upgradedWeapon))
+    processEvent(BattleState.GameOver("Mati terbunuh oleh monster"))
 }
