@@ -1,4 +1,4 @@
-package oop_127511_vierza.week07
+package oop_127511_vierza.week07.latihan
 
 fun main() {
     println("=== TEST SINGLETON ===")

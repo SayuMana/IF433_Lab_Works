@@ -1,4 +1,4 @@
-package oop_127511_vierza.week07
+package oop_127511_vierza.week07.latihan
 
 class NetworkClient private constructor(val url: String) {
     companion object {
