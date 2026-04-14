@@ -15,7 +15,10 @@ fun main() {
         try {
             val product = parser.parseProduct(raw)
             product?.let {
-                parser.checkout(it)
+                when (it) {
+                    is Electronic -> println("${it.name} (Warranty ${it.warrantyMonths})")
+                    is Clothing -> println("${it.name} (Size ${it.size})")
+                }
             }
         } catch (e: IllegalArgumentException) {
             println("Log Warning: ${e.message}")
