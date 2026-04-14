@@ -16,6 +16,7 @@ class ApiParser {
                 Clothing(id, name, size)
             }
             else -> null
+
         }
     }
 }
