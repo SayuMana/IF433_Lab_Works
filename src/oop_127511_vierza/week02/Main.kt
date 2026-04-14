@@ -1,4 +1,4 @@
-package oop_127511_vierza.week2
+package oop_127511_vierza.week02
 
 import java.util.Scanner
 

@@ -1,7 +1,7 @@
 package oop_127511_vierza.week06.tugasMandiri
 
 interface SmartDevice {
-    val id: String
+    val id: String 
     val name: String
 }
 

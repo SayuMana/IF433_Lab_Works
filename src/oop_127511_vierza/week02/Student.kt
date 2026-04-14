@@ -1,4 +1,4 @@
-package oop_127511_vierza.week2
+package oop_127511_vierza.week02
 
 class Student(
     val name: String,

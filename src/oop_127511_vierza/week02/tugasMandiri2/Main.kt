@@ -1,4 +1,4 @@
-package oop_127511_vierza.week2.tugasMandiri2
+package oop_127511_vierza.week02.tugasMandiri2
 
 import java.util.Scanner
 

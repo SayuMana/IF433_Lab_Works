@@ -1,4 +1,4 @@
-package oop_127511_vierza.week2.tugasMandiri1
+package oop_127511_vierza.week02.tugasMandiri1
 
 class Loan (
     var bookTitle: String,
