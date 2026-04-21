@@ -5,5 +5,5 @@ fun main() {
     println("Original numbers: $numbers")
     println("\nHOF filter")
     val evens = numbers.filter { it % 2 == 0}
-    println("Evens: $evens"
+    println("Evens: $evens")
 }
