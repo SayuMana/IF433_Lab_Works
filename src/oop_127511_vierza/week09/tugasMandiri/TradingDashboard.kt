@@ -11,5 +11,10 @@ fun main() {
     )
 
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+    println("\nClosed Trades")
     closedTrades.forEach { println(it) }
+
+    val winningTrades = tradeHistory.filter { it.roe > 0 }
+    println("\nWinning Trades")
+    winningTrades.forEach { println(it) }
 }
