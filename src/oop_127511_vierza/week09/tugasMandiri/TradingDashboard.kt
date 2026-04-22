@@ -11,17 +11,8 @@ fun main() {
     )
 
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
-    println("\nClosed Trades")
-    closedTrades.forEach { println(it) }
-
-    val winningTrades = tradeHistory.filter { it.roe > 0 }
-    println("\nWinning Trades")
-    winningTrades.forEach { println(it) }
-
+    val winningTrades = closedTrades.filter { it.roe > 0 }
     val losingTrades = closedTrades.filter { it.roe <= 0 }
-    println("\nLosing Trades")
-    winningTrades.forEach { println(it) }
-
     val topPerformerString = winningTrades
         .sortedByDescending { it.roe }
         .map { "WIN [${it.pair} - ${it.position}] : +${it.roe}% ROE (Lev: ${it.leverage}x)" }
@@ -37,8 +28,19 @@ fun main() {
     println("\n=== CRYPTO TRADING DASHBOARD ===")
     println("Top Performers Trades")
     topPerformerString.forEach { println(it) }
+
     println("\nWorst Performers Trades")
     worstPerformerString.forEach { println(it) }
+
     println("\nUnique Pairs")
     println(uniquePairs)
+
+    println("\nWinning Trades")
+    winningTrades.forEach { println(it) }
+
+    println("\nLosing Trades")
+    winningTrades.forEach { println(it) }
+
+    println("\nClosed Trades")
+    closedTrades.forEach { println(it) }
 }
