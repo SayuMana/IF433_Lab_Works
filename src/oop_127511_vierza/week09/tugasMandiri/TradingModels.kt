@@ -1,6 +1,6 @@
 package oop_127511_vierza.week09.tugasMandiri
 
-data class TaradeLog(
+data class TradeLog(
     val pair: String,
     val position: String,
     val leverage: Int,
