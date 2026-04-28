@@ -15,4 +15,9 @@ fun main() {
     printData(3.14)
     val results = processData("Stable Coin")
     println("Hasil proces: $results")
+
+    println("\nTest constraints")
+    val math = MathBox(10.5, 20)
+    println("Total : ${math.sum()}")
+    println("Terbesar : ${getMax(69, 67)}")
 }
