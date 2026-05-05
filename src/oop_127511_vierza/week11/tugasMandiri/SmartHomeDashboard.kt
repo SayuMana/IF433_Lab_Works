@@ -17,4 +17,21 @@ fun main() {
         println("(LOG) Kamera terhubung")
         homeDevices.add(it)
     }
+
+    homeDevices.add(
+        run {
+            SmartDevice(
+                "Daikin Inverter (Kabel 3x2.5)",
+                "HVAC",
+                false,
+                800
+            )
+            SmartDevice(
+                "Picolo's Auto Feeder",
+                "Pet Care",
+                true,
+                10
+            )
+        }
+    )
 }
