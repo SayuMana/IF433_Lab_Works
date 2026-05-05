@@ -54,4 +54,9 @@ fun main() {
         }
     }
     println("Total Power: $totalPower")
+
+    println("\n")
+    homeDevices.forEach {
+        println("${it.diagnose()}")
+    }
 }
