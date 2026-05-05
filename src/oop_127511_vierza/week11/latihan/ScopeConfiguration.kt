@@ -21,4 +21,10 @@ fun main() {
     with(user) {
         println("User Detail -> Nama: ${name}, Umur: ${age}")
     }
+
+    val newUser = User("Hina", 18).apply {
+        age = 20
+    }.also {
+        println("User baru: $it")
+    }
 }
