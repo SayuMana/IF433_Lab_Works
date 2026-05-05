@@ -7,9 +7,9 @@ data class SmartDevice(
     var powerLoad: Int = 0
 )
 
-fun SmartDevice.diagnore():String {
+fun SmartDevice.diagnose():String {
     return "[DIAGNOSTIK] $name | " +
-            "Kategori: $category |" +
-            "Status: ${if (isOnline) "Online" else "Offline"} |" +
+            "Kategori: $category | " +
+            "Status: ${if (isOnline) "Online" else "Offline"} | " +
             "Daya: $powerLoad Watt"
 }
