@@ -8,10 +8,20 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
     if (isJammed) throw DispenserJamException()
     if (requestedGram > availableGram) throw FoodEmptyException(requestedGram, availableGram)
 
-    println("Kibble berhasil dikeluarkan!")
+    println("Kibble berhasil dikeluarkan! Sisa stock: ${availableGram - requestedGram}")
     return availableGram - requestedGram
 }
 
 fun main() {
     var currentKibbleStock = 50
+
+    var simulation = try {
+        dispenseKibble(80, currentKibbleStock, false)
+    } catch (e: DispenserJamException) {
+        println("Error: ${e.message}")
+    } catch (e: FoodEmptyException) {
+        println("Error: ${e.message}")
+    } catch (e: Exception) {
+        println("Error: ${e.message}")
+    }
 }
