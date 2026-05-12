@@ -16,7 +16,7 @@ fun main() {
     var currentKibbleStock = 50
 
     var simulationPagi = try {
-        dispenseKibble(80, currentKibbleStock, false)
+        dispenseKibble(-10, currentKibbleStock, false)
     } catch (e: DispenserJamException) {
         println("Error: ${e.message}")
     } catch (e: FoodEmptyException) {
@@ -24,11 +24,11 @@ fun main() {
     } catch (e: Exception) {
         println("Error: ${e.message}")
     } finally {
-        println("Siklus pengecekan dispenser pagi selesai")
+        println("Siklus pengecekan dispenser pagi selesai\n")
     }
 
     var simulationSore = runCatching {
-        dispenseKibble(30, 1000, false)
+        dispenseKibble(30, 0, false)
     }.onSuccess { newStock ->
         currentKibbleStock = newStock
         println("Makan sore success! Sisa stock kibble: ${currentKibbleStock}gr")
