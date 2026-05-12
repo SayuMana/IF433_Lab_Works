@@ -32,5 +32,7 @@ fun main() {
     }.onSuccess { newStock ->
         currentKibbleStock = newStock
         println("Makan sore success! Sisa stock kibble: ${currentKibbleStock}gr")
+    }.onFailure { e ->
+        println("Warning!: ${e.message}")
     }
 }
