@@ -11,4 +11,12 @@ fun main() {
 
     val recovered = result.recover { 0 }.getOrNull()
     println("Recovered Value: $recovered")
+
+    runCatching {
+        "100".toInt()
+    }.onSuccess { v ->
+        println("Convertion success: $v")
+    }.onFailure { e ->
+        println("Error: ${e.message}")
+    }
 }
