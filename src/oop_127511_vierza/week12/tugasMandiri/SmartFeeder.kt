@@ -15,7 +15,7 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
 fun main() {
     var currentKibbleStock = 50
 
-    var simulation = try {
+    var simulationPagi = try {
         dispenseKibble(80, currentKibbleStock, false)
     } catch (e: DispenserJamException) {
         println("Error: ${e.message}")
@@ -25,5 +25,9 @@ fun main() {
         println("Error: ${e.message}")
     } finally {
         println("Siklus pengecekan dispenser pagi selesai")
+    }
+
+    var simulationSore = runCatching {
+        dispenseKibble(30, 1000, false)
     }
 }
