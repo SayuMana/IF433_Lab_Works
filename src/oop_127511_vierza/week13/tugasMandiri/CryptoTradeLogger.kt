@@ -81,4 +81,8 @@ fun main() {
 
     val loadedData = loadTrades(file.path)
     val totalPnL = loadedData.sumOf { it.pnl }
+
+    println("\nLoaded student data")
+    loadedData.forEach { println(it) }
+    println("Total PnL: $totalPnL")
 }
