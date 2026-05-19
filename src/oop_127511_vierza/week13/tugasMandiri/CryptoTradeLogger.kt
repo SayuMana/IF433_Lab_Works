@@ -1,5 +1,7 @@
 package oop_127511_vierza.week13.tugasMandiri
+import oop_127511_vierza.week13.latihan.fromCSV
 import java.io.File
+import java.io.FileNotFoundException
 
 data class TradeRecord(
     val id: Int,
@@ -33,5 +35,14 @@ fun saveTrades(trades: List<TradeRecord>, path: String) {
         trades.forEach {
             out.println(it.toCSV())
         }
+    }
+}
+
+fun loadTrades(path: String) : List<TradeRecord?> {
+    return try {
+        File(path).readLines().map { fromCSVTrade(it) }
+    } catch (e: FileNotFoundException) {
+        println("Error!")
+        emptyList()
     }
 }
