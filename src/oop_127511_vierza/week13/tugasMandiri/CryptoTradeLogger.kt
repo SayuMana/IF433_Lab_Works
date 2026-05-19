@@ -75,4 +75,7 @@ fun main() {
     )
 
     saveTrades(riwayatTrade, "crypto_trades.csv")
+
+    val file = File("crypto_trades.csv")
+    file.appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
 }
