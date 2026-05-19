@@ -25,4 +25,5 @@ fun fromCSVTrade(line: String) : TradeRecord?{
         println("Log: Data korup diabaikan: $line")
         null
     }
+
 }
