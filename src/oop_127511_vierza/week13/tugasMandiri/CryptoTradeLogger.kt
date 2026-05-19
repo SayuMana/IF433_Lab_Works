@@ -42,7 +42,37 @@ fun loadTrades(path: String) : List<TradeRecord?> {
     return try {
         File(path).readLines().map { fromCSVTrade(it) }
     } catch (e: FileNotFoundException) {
-        println("Error!")
+        println("Error!: ${e.message} ")
         emptyList()
     }
+}
+
+fun main() {
+    val riwayatTrade = listOf(
+        TradeRecord(
+            1,
+            "BTCUSDT",
+            "Long",
+            1000.0,
+            250.5
+        ),
+
+        TradeRecord(
+            2,
+            "ETHUSDT",
+            "Short",
+            500.0,
+            -75.25
+        ),
+
+        TradeRecord(
+            3,
+            "SOLUSDT",
+            "Long",
+            750.0,
+            120.0
+        )
+    )
+
+    saveTrades(riwayatTrade, "crypto_trades.csv")
 }
