@@ -38,11 +38,11 @@ fun saveTrades(trades: List<TradeRecord>, path: String) {
     }
 }
 
-fun loadTrades(path: String) : List<TradeRecord?> {
+fun loadTrades(path: String) : List<TradeRecord> {
     return try {
-        File(path).readLines().map { fromCSVTrade(it) }
+        File(path).readLines().mapNotNull { fromCSVTrade(it) }
     } catch (e: FileNotFoundException) {
-        println("Error!: ${e.message} ")
+        println("Error!: ${e.message}")
         emptyList()
     }
 }
@@ -78,4 +78,7 @@ fun main() {
 
     val file = File("crypto_trades.csv")
     file.appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+
+    val loadedData = loadTrades(file.path)
+    val totalPnL = loadedData.sumOf { it.pnl }
 }
