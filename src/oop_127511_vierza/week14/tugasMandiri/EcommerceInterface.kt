@@ -7,3 +7,7 @@ interface OrderRepository {
 interface NotificationService {
     fun sendNotification(order: Order)
 }
+
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
