@@ -2,7 +2,7 @@ package oop_127511_vierza.week14.tugasMandiri
 import java.io.File
 
 class BadOrderProcessor {
-    private val file = File("src/oop_127511_vierza/week14/tugasMandiri/orders.csv") //DIP
+//    private val file = File("src/oop_127511_vierza/week14/tugasMandiri/orders.csv") //DIP
 
     fun processOrder(itemName: String, basePrice:Double, customerType: String) {
         val finalPrice = when (customerType) {
@@ -11,9 +11,9 @@ class BadOrderProcessor {
             else -> basePrice
         } // ocp
 
-        println("Memproses pesanan $itemName seharga $finalPrice")
+//        println("Memproses pesanan $itemName seharga $finalPrice")
 
-        file.appendText("$itemName,$finalPrice,$customerType\n") //srp dip
-        println("Email terkirim! Pesanan $itemName Anda telah dikonfirmansi!") // srp dip
+//        file.appendText("$itemName,$finalPrice,$customerType\n") //srp dip
+//        println("Email terkirim! Pesanan $itemName Anda telah dikonfirmansi!") // srp dip
     }
 }
